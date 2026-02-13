@@ -469,4 +469,12 @@ body {
     background: var(--danger);
 }
 
+.site-footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: auto;
+    text-align: center;
+}
+
 
