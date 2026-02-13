@@ -156,4 +156,24 @@ function showToast (message,type = 'success') {
         toast.classList.remove('show');
     },3000);
 }
+
+/**
+ * Update stats on home page
+ */
+function UpdateHomeStats() {
+    const recipe = JSON.parse(localStorage.getItem("recipes")) || [];
+
+    // Update recipe count
+    const recipeCountE1 = document.getElementById("recipeCount");
+    if (recipeCountE1) {
+        recipeCountE1.textContent = recipes.length;
+    }
+
+    // Calculate total cooking time
+    const totalTime = recipes.reduce((sum, recipe)=> sum + (recipe.time || 0), 0);
+    const totalTimeE1 = document.getElementById("totalTime");
+    if (totalTime) {
+        totalTimeE1.textContent = totalTime;
+    }
+}
    
