@@ -180,3 +180,29 @@ body {
     line-height: 1.6;
 }
 
+.stats-section {
+    padding: 3rem 0;
+}
+
+.stat-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat-box h4 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.stat-box p {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+
+
