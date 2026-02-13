@@ -111,3 +111,31 @@ function displayRecipes() {
             
         }
     }
+
+    /** 
+     * Delete a recipe by index
+     * @param {number} index - Index of recipe to delete
+    */
+function deleteRecipe(index) {
+    // Confirm deletion 
+    if (!confirm("Are you sure you want to delete this recipe")) {
+        return;
+    }
+
+    // Get recuipes from localStorage
+    let recipes = JSON.parse(localStorage.getItem("recipes")) || [];
+
+    // Remove the recipe at the specified index
+    recipes.splice(index, 1);
+
+    // Save back to localStorage
+    localStorage.setItem("recipes", JSON.stringify(recipes));
+
+    // Show success message 
+    showToast("Recipe deleted successfully" ,"success");
+
+    // Refresh the display 
+    displayRecipes();
+}
+
+   
