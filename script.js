@@ -138,4 +138,22 @@ function deleteRecipe(index) {
     displayRecipes();
 }
 
+/**
+ * show toast notification
+ * @param {string} message -Message to display
+ * @param {string} type -Type of toast: 'success' or 'error'
+ */
+function showToast (message,type = 'success') {
+    const toast = document.getElementById('toast');
+
+    if (!toast) return; // Toast element doesn't exist on this page
+    
+    toast.textContent = message;
+    toast.className =`toast show ${type}`;
+
+    // Hide After 3sec
+    setTimeout (()=>{
+        toast.classList.remove('show');
+    },3000);
+}
    
