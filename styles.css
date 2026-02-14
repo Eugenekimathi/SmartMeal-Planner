@@ -184,6 +184,12 @@ body {
     padding: 3rem 0;
 }
 
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
 .stat-box {
     background: var(--white);
     padding: 2rem;
